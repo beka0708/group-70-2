@@ -1,5 +1,7 @@
 import asyncio
+import logging
 from aiogram import Bot, Dispatcher
+
 
 from src.handlers import router
 from config import BOT_TOKEN
@@ -15,4 +17,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     asyncio.run(main())
